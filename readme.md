@@ -3,10 +3,10 @@
 A command line tool to manage the seat allocation for a library(self study point or lab).This will be my project for  Vityathi Python essential course.
 
 ## Features 
--Register simple users(id, name etc.)
--Allocate the seat to a user 
--Vacant a seat 
--Save and load data from local json files.
+ i. Register simple users(id, name etc.)
+ ii. Allocate the seat to a user 
+ iii. Vacant a seat 
+ iv. Save and load data from local json files.
 
 ## How can we run the program ?
 
@@ -58,6 +58,15 @@ vityarthi_python/
 ├── README.md
 ├── report.md
 ├── statement.md
+|
+├── images/
+|   └──screenshots
+│      ├── List_and_allocation_seats.png
+|      ├── menu_usercreation.png
+|      ├── release_seats.png
+|      ├── save_exit.png
+│      └── testing.png
+├── logs
 ```
 ## Instruction for testing
     To test the project you just have to run the command inside the terminal of the project folder:
