@@ -12,10 +12,7 @@ A command line tool to manage the seat allocation for a library(self study point
 -Python 3.14.0
 -no any library
 
-## Quick start
-1. Just download the repository and run the main.py file  by using Command "python main.py" by using a intergrated terminal opened in that folder in which main.py kept.
-
-# Project Structure
+# Project Structure 
 
 VITYARTHI_PROJECT_FINAL/
 │
@@ -37,3 +34,30 @@ VITYARTHI_PROJECT_FINAL/
 ├── report.md
 ├── statement.md
 └── notes.txt
+
+# How can we run the program ?
+
+First we have to open a terminal inside the project folder then we habe to run a command 
+        "python src/main.py"
+
+    Then we will get a list:-
+
+    1. Creaate User
+    2. List Users  
+    3. List Seats
+    4. Allocate Seat
+    5. Release Seat
+    6. Save & Exit
+    0. Exit Without Saving
+
+
+then we have to choose the Number Accordingly which we need to do.
+
+# Data saving location
+  data/users.json
+  data/seats.json
+
+-It can be easily opened in any text editor and from there, we can easily read and analyse.
+
+
+
