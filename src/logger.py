@@ -17,3 +17,9 @@ def _write_log(message_type, message):
     with open(log_file, "a", encoding="utf-8") as f:
         timestamp = datetime.now().strftime("%H:%M:%S")
         f.write(f"[{timestamp}] [{message_type}] {message}\n")
+
+def log_info(message):
+    _write_log("INFO", message)
+
+def log_error(message):
+    _write_log("ERROR", message)
