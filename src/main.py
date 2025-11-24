@@ -1,17 +1,7 @@
-# src/main.py
-"""
-Main CLI program for the Seat Allotment System.
-I am keeping everything simple because this is a beginner-level project.
-"""
-
-# TODO: Maybe later add a small welcome message animation or colors
-
 from users import UserManager
 from seats import SeatManager
 from storage import load_users, save_users, load_seats, save_seats
 
-
-# file paths (relative)
 USERS_FILE = "data/users.json"
 SEATS_FILE = "data/seats.json"
 
@@ -31,15 +21,12 @@ def show_menu():
 
 
 def main():
-    # Loading data from files
     users_data = load_users(USERS_FILE)
     seats_data = load_seats(SEATS_FILE)
 
-    # managers
     user_mgr = UserManager(users_data)
     seat_mgr = SeatManager(seats_data)
 
-    # main loop
     while True:
         show_menu()
         choice = input("Enter your choice: ").strip()
@@ -64,23 +51,23 @@ def main():
         elif choice == "3":
             print("\n--- Seat Status ---")
             seats = seat_mgr.list_seats()
-            for sid, occupied_by in seats.items():
-                print(f"Seat {sid}: {occupied_by}")
+            for sid, occ in seats.items():
+                print(f"Seat {sid}: {occ}")
 
         elif choice == "4":
             try:
-                sid = int(input("Enter seat ID to allocate: "))
+                sid = int(input("Enter seat ID: "))
             except ValueError:
                 print("Invalid seat number!")
                 continue
 
             uid = input("Enter user ID: ").strip()
-            ok = seat_mgr.allocate(sid, uid, user_mgr)
 
+            ok = seat_mgr.allocate(sid, uid, user_mgr)
             if ok:
                 print("Seat allocated successfully.")
             else:
-                print("Failed to allocate seat. Either taken or user not found.")
+                print("Failed to allocate seat. Check seat or user ID.")
 
         elif choice == "5":
             try:
@@ -93,13 +80,14 @@ def main():
             if ok:
                 print("Seat released successfully.")
             else:
-                print("Failed to release seat (maybe already free).")
+                print("Failed to release seat (maybe it was already empty).")
 
+        # --------------------
         elif choice == "6":
             print("Saving data...")
             save_users(USERS_FILE, user_mgr.users)
             save_seats(SEATS_FILE, seat_mgr.to_dict())
-            print("Data saved. Exiting program.")
+            print("Data saved. Goodbye!")
             break
 
         elif choice == "0":
@@ -107,7 +95,7 @@ def main():
             break
 
         else:
-            print("Unknown option. Try again.")
+            print("Invalid option, please try again.")
 
 
 if __name__ == "__main__":
