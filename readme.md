@@ -69,4 +69,12 @@ vityarthi_python/
 ### MENU AND USER CREATION
 ![menu_usercreation](/assets/screenshots/menu_usercreation.png)    
 
+### LIST AND ALLOCATION SEATS
+![list_allocation](/assets/screenshots/List_and_allocation_seats.png)    
+
+### RELEASE SEATS 
+![release_seats](/assets/screenshots/release_seats.png)
+
+### Save and Exit
+![save_exit](/assets/screenshots/save_exit.png)
 
