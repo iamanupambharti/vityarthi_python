@@ -1,4 +1,5 @@
 from users import UserManager
+from logger import log_info, log_error
 from seats import SeatManager
 from storage import load_users, save_users, load_seats, save_seats
 
@@ -41,8 +42,10 @@ def main():
                 uid = user_mgr.create_user(name, email)
             if uid is not None:
                 print("User created with ID:", uid)
+                log_info(f"Created user: {name}, ID: {uid}")
             else:
                 print("User not created due to invalid email.")
+                log_error(f"User creation failed due to invalid email: {email}")
 
         elif choice == "2":
 
@@ -85,8 +88,10 @@ def main():
             ok = seat_mgr.allocate(sid, uid, user_mgr)
             if ok:
                 print("Seat allocated successfully.")
+                log_info(f"Allocated seat {sid} to user {uid}")
             else:
                 print("Failed to allocate seat. Check seat or user ID.")
+                log_error(f"Failed to allocate seat {sid} for user {uid}")
 
         elif choice == "5":
             try:
@@ -98,14 +103,17 @@ def main():
             ok = seat_mgr.release(sid)
             if ok:
                 print("Seat released successfully.")
+                log_info(f"Released seat {sid}")
             else:
                 print("Failed to release seat (maybe it was already empty).")
+                log_error(f"Failed to release seat {sid}")
 
         elif choice == "6":
             print("Saving data...")
             save_users(USERS_FILE, user_mgr.users)
             save_seats(SEATS_FILE, seat_mgr.to_dict())
             print("Data saved. Goodbye!")
+            log_info("Program exited after saving data.")
             break
 
         elif choice == "0":
