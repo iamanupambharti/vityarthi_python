@@ -55,8 +55,7 @@ vityarthi_python/
 │ ├── test_users.py
 │ └── test_seats.py
 │
-├── README.md
-├── report.md
+├── readme.md
 ├── statement.md
 |
 ├── images/
