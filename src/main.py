@@ -33,20 +33,31 @@ def main():
 
         if choice == "1":
             name = input("Enter user name: ").strip()
+            email = input("Enter email: ").strip()
+
             if name == "":
                 print("Name cannot be empty.")
             else:
-                uid = user_mgr.create_user(name)
+                uid = user_mgr.create_user(name, email)
+            if uid is not None:
                 print("User created with ID:", uid)
+            else:
+                print("User not created due to invalid email.")
 
         elif choice == "2":
+
             print("\n--- User List ---")
             all_users = user_mgr.list_users()
             if len(all_users) == 0:
                 print("No users found.")
             else:
                 for u in all_users:
-                    print(f"{u['id']} - {u['name']}")
+                    email = u.get("email")
+                    if email:
+                        print(f"{u['id']} - {u['name']}  <{email}>")
+                    else:
+                        print(f"{u['id']} - {u['name']}  <no-email>")
+
 
         elif choice == "3":
             print("\n--- Seat Status ---")
@@ -90,7 +101,6 @@ def main():
             else:
                 print("Failed to release seat (maybe it was already empty).")
 
-        # --------------------
         elif choice == "6":
             print("Saving data...")
             save_users(USERS_FILE, user_mgr.users)
