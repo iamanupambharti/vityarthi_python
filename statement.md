@@ -28,5 +28,4 @@ A seat-managing system felt like the right balance between “not too hard” an
 
 ## Personal Note
 This is one of my first structured Python projects.  
-I wrote all the code step-by-step, tested each part, and kept things as simple and readable as possible so that I can understand it later as well.
 

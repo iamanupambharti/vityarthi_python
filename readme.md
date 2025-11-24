@@ -78,3 +78,6 @@ vityarthi_python/
 ### Save and Exit
 ![save_exit](/assets/screenshots/save_exit.png)
 
+### Testing
+![testing](/assets/screenshots/testing.png)
+
