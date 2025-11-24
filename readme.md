@@ -60,4 +60,13 @@ vityarthi_python/
 ├── statement.md
 └── notes.txt
 
+## Instruction for testing
+    To test the project you just have to run the command inside the terminal of the project folder:
+        "python -m unittest discover tests"
+
+## Screen Shots 
+
+### MENU AND USER CREATION
+![menu_usercreation](/assets/screenshots/menu_usercreation.png)    
+
 
