@@ -38,7 +38,7 @@ then we have to choose the Number Accordingly which we need to do.
 -It can be easily opened in any text editor and from there, we can easily read and analyse.
 
 ## Project Structure 
-
+```
 vityarthi_python/
 │
 ├── src/
@@ -58,8 +58,7 @@ vityarthi_python/
 ├── README.md
 ├── report.md
 ├── statement.md
-└── notes.txt
-
+```
 ## Instruction for testing
     To test the project you just have to run the command inside the terminal of the project folder:
         "python -m unittest discover tests"
@@ -67,17 +66,17 @@ vityarthi_python/
 ## Screen Shots 
 
 ### MENU AND USER CREATION
-![menu_usercreation](/assets/screenshots/menu_usercreation.png)    
+![menu_usercreation](/images/screenshots/menu_usercreation.png)    
 
 ### LIST AND ALLOCATION SEATS
-![list_allocation](/assets/screenshots/List_and_allocation_seats.png)    
+![list_allocation](/images/screenshots/List_and_allocation_seats.png)    
 
 ### RELEASE SEATS 
-![release_seats](/assets/screenshots/release_seats.png)
+![release_seats](/images/screenshots/release_seats.png)
 
 ### Save and Exit
-![save_exit](/assets/screenshots/save_exit.png)
+![save_exit](/images/screenshots/save_exit.png)
 
 ### Testing
-![testing](/assets/screenshots/testing.png)
+![testing](/images/screenshots/testing.png)
 
