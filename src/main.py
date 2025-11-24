@@ -51,8 +51,16 @@ def main():
         elif choice == "3":
             print("\n--- Seat Status ---")
             seats = seat_mgr.list_seats()
+
             for sid, occ in seats.items():
-                print(f"Seat {sid}: {occ}")
+                if occ is None:
+                    print(f"Seat {sid}: Empty")
+                else:
+                    user = user_mgr.find_user(occ)
+                    if user:
+                        print(f"Seat {sid}: {user['name']} ({occ})")
+                    else:
+                        print(f"Seat {sid}: {occ}")
 
         elif choice == "4":
             try:
