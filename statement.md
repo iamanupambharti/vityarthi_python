@@ -1,5 +1,5 @@
 # Project Statement – Seat Manager
-This project is a simple command-line based Seat Manager System that I made as a part of my Python Projject.  
+This project is a simple command-line based Seat Manager System that I made as a part of my Python Project.  
 The main idea is to manage users and seat allocation in a library(self study point) or lab. 
 
 ## What the Project Does
