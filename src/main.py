@@ -8,7 +8,7 @@ SEATS_FILE = "data/seats.json"
 
 def show_menu():
     print("\n============================")
-    print("     SEAT ALLOTMENT CLI     ")
+    print("     SEAT MANAGER CLI     ")
     print("============================")
     print("1. Create User")
     print("2. List Users")
